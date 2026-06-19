@@ -38,7 +38,6 @@ def turistas_por_mes(mes):
         if mes == int(turistas[turista][2].split("-")[1]):
             turistas_mensual += 1
     porcentaje = (turistas_mensual / len(turistas)) * 100
-    print(f"El porcentaje de turistas en el mes {mes} es: {porcentaje:.2f}%")
     return porcentaje
         
 
@@ -56,7 +55,9 @@ while True:
             
         elif opcion == 2:
             mes = int(input("Ingresa el mes\n>>> "))
-            turistas_por_mes(mes)
+            resultado = turistas_por_mes(mes)
+            print(f"El porcentaje de turistas en el mes {mes} es: {resultado:.1f}%")
+            
             
         elif opcion == 3:
             eliminar_turista()
